@@ -1,0 +1,2 @@
+# sevenpeaks
+Wordpress Theme
