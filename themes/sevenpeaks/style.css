@@ -1,0 +1,499 @@
+/* Theme Name: 7 Peaks */
+/* Theme URI: None */
+/* Author: Guy @ skipthegardener */
+/* Author URI: None */
+/* Description: Custom made for 7 Peaks Powder Coating */
+/* Tags: None */
+/* Version: 0.1 */
+/* Requires PHP: 8.1 */
+/* License: Copyright, All rights reserved 7 Peaks */
+/* Text Domain: sevenpeaks */
+@import "build/normalize.css";
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  background-color: #fff;
+  font-family: "Rubik", san-serif;
+  font-weight: 200;
+  margin: 0;
+}
+
+header {
+  margin: 1em 53px 0;
+}
+
+main > [class*=wp-container-], .page-title, .home-page-title {
+  padding-left: 53px;
+  padding-right: 53px;
+}
+
+
+@media screen and (max-width: 536px) {
+  .image-menu-item {
+    flex-basis: calc(50% - 4px);
+  }
+  main > [class*=wp-container-], .home-page-title {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.block-image-menu {
+  margin-left: 0;
+  justify-content: space-between;
+}
+
+
+.wp-block-columns.whole-width {
+  padding: 0;
+  gap: 3em !important;
+}
+
+.whole-width > :first-child.normal-side-padding {
+  padding-left: 53px;
+}
+
+.whole-width > :last-child.normal-side-padding {
+  padding-right: 53px;
+}
+
+.site-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.logo {
+  display: block;
+  max-width: 190px;
+  margin-bottom: -0.1em;
+}
+
+.business-details {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+.business-details a {
+  color: #000;
+}
+
+.phone-number {
+  font-size: 32px;
+  color: #000;
+  text-decoration: none;
+}
+.phone-number img {
+  display: inline;
+  margin-right: 8px;
+  width: 24px;
+  height: 24px;
+}
+.phone-number:hover img {
+  animation: ring 0.2s cubic-bezier(0.65, 0.05, 0.36, 1) 0.05s 3;
+}
+
+@keyframes ring {
+  0% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+.main-menu .menu {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  list-style: none;
+}
+.main-menu .menu-item:not(.menu-item-has-children)::before {
+  content: "";
+  display: block;
+  background: linear-gradient(0deg, #2a965f 0%, #2a965f 49.9%, #e3902a 50%, #e3902a 100%);
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: top 0.3s;
+}
+.main-menu .menu-item:hover::before {
+  top: -100%;
+}
+.main-menu .menu-item-has-children {
+  background: #e3902a;
+}
+.main-menu .menu-item-has-children:hover {
+  background: #2a965f;
+  overflow: visible;
+}
+.main-menu .menu-item-has-children:hover .sub-menu {
+  opacity: 1;
+}
+.main-menu .menu-item {
+  margin-right: 6px;
+  position: relative;
+  overflow: hidden;
+}
+.main-menu .menu-item a {
+  position: relative;
+  display: block;
+  color: #000;
+  padding: 10px;
+  text-decoration: none;
+  font-weight: 400;
+}
+.main-menu .sub-menu {
+  background: #fff;
+  padding: 6px 0 0 0;
+  position: absolute;
+  top: 39px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  z-index: 33;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.main-menu .sub-menu .menu-item {
+  margin-bottom: 6px;
+  overflow: hidden;
+}
+.main-menu .sub-menu .menu-item a {
+  width: max-content;
+}
+
+.menu-button {
+  margin-bottom: 0.3em;
+  display: none;
+  cursor: pointer;
+}
+.menu-button .menu-slice {
+  transition: 0.2s ease-in;
+  width: 26px;
+  height: 3px;
+  margin-bottom: 3px;
+  border-radius: 12%;
+  background: #843080;
+}
+
+.mobile-menu-showing .menu-slice.one {
+  transform: translate(0, 6px) rotate(45deg);
+}
+.mobile-menu-showing .menu-slice.two {
+  opacity: 0;
+}
+.mobile-menu-showing .menu-slice.tre {
+  transform: translate(0, -6px) rotate(-45deg);
+}
+
+main h1, main h2, main h3, main h4, main h5, main h6 {
+  font-weight: 400;
+}
+main h2 {
+  font-size: 38px;
+}
+main .wp-block-group__inner-container h3 {
+  margin-bottom: 0.2em;
+}
+
+.home .wp-container-8 {
+  gap: 8px;
+}
+.home .wp-block-video {
+  margin: 0;
+}
+.home .wp-block-video video {
+  display: block;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.home .block-image-menu {
+  justify-content: flex-start;
+}
+
+.vertical {
+  margin-top: 0;
+  list-style: none;
+  padding-left: 0;
+}
+.vertical li:not(:last-of-type)::after {
+  content: "";
+  display: inline-block;
+  background: #fbba3f;
+  width: 2.5px;
+  height: 0.85em;
+  margin-left: 0.8em;
+  position: relative;
+  top: 1px;
+}
+.vertical li {
+  margin-left: 0;
+  display: inline-block;
+  margin-right: 0.8em;
+}
+
+.has-strapline {
+  margin-bottom: 8px;
+}
+
+.pad-b {
+  padding-bottom: 1em;
+}
+
+.image-menu-item,
+.image-menu-overlay {
+  border-radius: 6px;
+}
+.image-menu-item img,
+.image-menu-overlay img {
+  border-radius: 6px;
+}
+
+.has-4-columns .wp-block-getwid-instagram__item {
+  padding: 0 8px 8px 0;
+  width: calc(25% - 8px);
+}
+
+.wpcf7-form .wpcf7-form-control {
+  border-radius: 6px;
+}
+.wpcf7-form input:not([type=submit]), .wpcf7-form textarea {
+  width: 100%;
+  color: #000;
+  border: none;
+  padding: 9px;
+}
+.wpcf7-form textarea {
+  height: 6em;
+}
+.wpcf7-form .wpcf7-submit {
+  background: #fff;
+  color: #000;
+  border: 2px solid;
+  padding: 9px;
+}
+
+iframe[src*="maps.google.com"] {
+  min-height: 300px;
+}
+
+@media screen and (min-width: 992px) {
+  .has-4-columns .wp-block-getwid-instagram__item {
+    width: calc(25% - 8px);
+  }
+}
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  margin-top: 1em;
+  padding: 3em 0;
+}
+
+.backtotop {
+  position: fixed;
+  width: 2em;
+  height: 2em;
+  right: 2.3em;
+  bottom: 1.7em;
+  transition: opacity 0.4s;
+  opacity: 0;
+  pointer-events: none;
+}
+.backtotop.visible {
+  pointer-events: all;
+  cursor: pointer;
+  opacity: 1;
+}
+
+@media screen and (max-width: 810px) {
+  header {
+    margin: 1em 33px 0;
+  }
+
+  main > [class^=wp-container-], .page-title {
+    padding-left: 33px;
+    padding-right: 33px;
+  }
+
+  .logo {
+    max-width: 120px;
+  }
+
+  .phone-number {
+    font-size: 22px;
+  }
+  .phone-number img {
+    width: 16.5px;
+    height: 16.5px;
+  }
+}
+@media screen and (min-width: 782px) and (max-width: 1070px) {
+  .image-menu-overlay {
+    padding: 0 0.8em;
+  }
+  .image-menu-overlay h3 {
+    margin-top: 0.8em;
+  }
+}
+@media screen and (max-width: 781px) {
+  .menu-button {
+    display: block;
+  }
+
+  .main-menu {
+    display: none;
+  }
+
+  .site-title {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .business-details {
+    text-align: center;
+    margin-top: 1em;
+  }
+
+  .menu-button {
+    position: absolute;
+    right: 0px;
+  }
+
+  .menu-main-menu-container::after {
+    content: "";
+    display: block;
+    height: 20px;
+    background: #e3902a;
+  }
+
+  .main-menu {
+    position: absolute;
+    background: #fff;
+    top: 120px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+  }
+  .main-menu .menu {
+    margin-top: 0;
+    padding: 1em 0 0 2em;
+    flex-direction: column;
+  }
+  .main-menu .menu-item {
+    margin: 0 0 6px 0;
+    background-color: transparent;
+    overflow: auto;
+  }
+  .main-menu .menu-item.menu-item-has-children:hover {
+    background: inherit;
+  }
+  .main-menu .menu-item:not(.menu-item-has-children)::before {
+    content: none;
+  }
+  .main-menu .sub-menu {
+    position: static;
+    opacity: 1;
+    margin-left: 2em;
+  }
+
+  .mobile-menu-showing .main-menu {
+    display: block;
+    z-index: 100;
+  }
+
+  .page-title {
+    text-align: center;
+    margin-bottom: 0.2em;
+    margin-top: 1.5em;
+  }
+
+  .wp-block-columns {
+    gap: 8px !important;
+  }
+
+  .wp-block-columns.whole-width {
+    gap: inherit !important;
+  }
+
+  .wp-block-column > figure {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .whole-width > .normal-side-padding {
+    padding-left: 33px;
+    padding-right: 33px;
+  }
+}
+@media screen and (max-width: 630px) {
+  .image-menu-excerpt {
+    display: none;
+  }
+}
+@media screen and (max-width: 536px) {
+  header {
+    margin: 1em 15px 0;
+  }
+
+  main > [class^=wp-container-], .page-title {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .whole-width > .normal-side-padding {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  main h2 {
+    font-size: 22px;
+  }
+
+  main h3 {
+    font-size: 20px !important;
+  }
+
+  .image-menu-item {
+    flex-basis: calc( 50% - 8px );
+  }
+
+  .image-menu-overlay {
+    padding: 0 1em;
+  }
+
+  .wp-block-getwid-instagram__item {
+    width: calc(50% - 8px) !important;
+  }
+}
+
+.wpcf7-response-output {
+  margin: 0;
+}
+
+.wpcf7-spinner {
+  background-color: #fff;
+  opacity: 1;
+  margin: -6px 8px;
+}
+
+.wpcf7-spinner::before {
+  background-color: #000;
+}
+
+
+/*# sourceMappingURL=style.css.map */

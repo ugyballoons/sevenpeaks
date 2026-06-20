@@ -1,0 +1,22 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "image-menu-block/image-menu",
+	"version": "0.1.0",
+	"title": "Images Menu",
+	"category": "widgets",
+	"icon": "images-alt",
+	"description": "Given a menu will output an image and caption for each menu item",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "image-menu",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {
+		"menuSlug": {
+			"type": "string"
+		}
+	}
+}
