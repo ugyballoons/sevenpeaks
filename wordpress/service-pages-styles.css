@@ -1,0 +1,90 @@
+/* =====================================================================
+   7 PEAKS — Service page styles  (standalone)
+   Use ONLY if you did NOT replace the whole style.css (these rules are
+   already inside it). Paste into Additional CSS. Pairs with
+   service-pages-content.html.
+   ===================================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --sp-ink: #191512;
+  --sp-orange: #e3902a;
+  --sp-green: #2a965f;
+  --font-display: "Schibsted Grotesk", system-ui, sans-serif;
+  --font-body: "Hanken Grotesk", system-ui, sans-serif;
+}
+
+.sp-service {
+  padding: 80px 84px;
+  font-family: var(--font-body);
+  color: var(--sp-ink);
+}
+.sp-eyebrow {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 12.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--sp-orange);
+  margin: 0 0 14px;
+}
+.sp-h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(30px, 3.4vw, 40px);
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+.sp-service .wp-block-columns { gap: 56px; }
+.sp-service__inner { max-width: 1160px; margin: 0 auto; }
+.sp-service .sp-h2 { margin-bottom: 18px; }
+.sp-service p {
+  font-size: 18px;
+  line-height: 1.65;
+  color: #463f38;
+  margin: 0 0 16px;
+  max-width: 560px;
+}
+.sp-service .sp-cta { margin-top: 26px; }
+.sp-service__img { margin: 0; }
+.sp-service__img img {
+  border-radius: 14px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  width: 100%;
+}
+.sp-service__more { max-width: 1160px; margin: 56px auto 0; padding-top: 32px; border-top: 1px solid var(--sp-hair, #e6e0d8); }
+.sp-service__more-label { display: block; font-size: 12.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #6b625a; margin-bottom: 14px; }
+.sp-service__chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.sp-chip {
+  display: inline-block;
+  padding: 9px 16px;
+  border: 1px solid var(--sp-ink);
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--sp-ink);
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+.sp-chip:hover { background: var(--sp-orange); border-color: var(--sp-orange); color: var(--sp-ink); }
+/* primary button (orange→green) */
+.sp-btn .wp-block-button__link {
+  border-radius: 6px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  padding: 13px 28px;
+  transition: background-color .3s, color .3s;
+}
+.sp-btn--primary .wp-block-button__link { background: var(--sp-orange); color: var(--sp-ink); }
+.sp-btn--primary .wp-block-button__link:hover { background: var(--sp-green); color: #fff; }
+
+@media (max-width: 900px) {
+  .sp-service { padding-left: 22px; padding-right: 22px; }
+}
+@media (max-width: 479px) {
+  .sp-service { padding: 52px 16px; }
+  .sp-service .wp-block-columns { gap: 28px; }
+  .sp-service p { font-size: 17px; }
+}

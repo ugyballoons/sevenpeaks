@@ -1,0 +1,168 @@
+<!-- =====================================================================
+     7 PEAKS — REDESIGNED HOME PAGE  ·  WordPress / Gutenberg block markup
+     ---------------------------------------------------------------------
+     HOW TO USE
+     1. Edit the Home page in WordPress.
+     2. Top-right ⋮ menu → "Code editor".
+     3. Select all, paste THIS markup in, then "Exit code editor".
+     4. Add the companion CSS (handoff/wordpress/home-styles.css) to
+        Appearance → Customise → Additional CSS (or your theme stylesheet).
+
+     Reuses YOUR existing blocks unchanged:
+       • image-menu-block/image-menu  (menuSlug "home-page-boxes")
+       • wp:video                     (your real home-page .mp4)
+       • [contact-form-7 id="124"]    (your quote form)
+       • sbi/sbi-feed-block           (Smash Balloon Instagram feed)
+     The className hooks (sp-*) are what the CSS targets — keep them.
+     ===================================================================== -->
+
+<!-- wp:group {"tagName":"section","className":"sp-hero","layout":{"type":"default"}} -->
+<section class="wp-block-group sp-hero"><!-- wp:columns {"verticalAlignment":"center"} -->
+<div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"58%","className":"sp-hero__copy"} -->
+<div class="wp-block-column is-vertically-aligned-center sp-hero__copy" style="flex-basis:58%"><!-- wp:paragraph {"className":"sp-eyebrow"} -->
+<p class="sp-eyebrow">Sheffield · Est. 2009</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":1,"className":"sp-display"} -->
+<h1 class="wp-block-heading sp-display">A tougher finish on every part that leaves the workshop.</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"className":"sp-lead"} -->
+<p class="sp-lead">Industrial and personal powder coating, blasted and prepped in-house here in Sheffield. Durable, even, corrosion-resistant colour in virtually any RAL shade.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons {"className":"sp-cta"} -->
+<div class="wp-block-buttons sp-cta"><!-- wp:button {"className":"sp-btn sp-btn--primary"} -->
+<div class="wp-block-button sp-btn sp-btn--primary"><a class="wp-block-button__link wp-element-button" href="#contact">Get a quote</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"className":"sp-btn sp-btn--outline"} -->
+<div class="wp-block-button sp-btn sp-btn--outline"><a class="wp-block-button__link wp-element-button" href="#services">View services</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:paragraph {"className":"sp-phone"} -->
+<p class="sp-phone">call us for a quote: <a href="tel:01144784780"><strong>0114 478 4780</strong></a></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"verticalAlignment":"center","className":"sp-hero__media"} -->
+<div class="wp-block-column is-vertically-aligned-center sp-hero__media"><!-- wp:video {"className":"sp-video"} -->
+<figure class="wp-block-video sp-video"><video autoplay loop muted playsinline src="https://7peakspowdercoating.co.uk/wp-content/uploads/2022/07/7-Peaks-home-page.mp4"></video></figure>
+<!-- /wp:video --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"tagName":"section","className":"sp-stats","layout":{"type":"default"}} -->
+<section class="wp-block-group sp-stats"><!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:paragraph {"className":"sp-stat__value"} --><p class="sp-stat__value">15+</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"sp-stat__label"} --><p class="sp-stat__label">Years coating in Sheffield</p><!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:paragraph {"className":"sp-stat__value"} --><p class="sp-stat__value">200+</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"sp-stat__label"} --><p class="sp-stat__label">RAL shades in stock</p><!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:paragraph {"className":"sp-stat__value"} --><p class="sp-stat__value">48hr</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"sp-stat__label"} --><p class="sp-stat__label">Typical turnaround</p><!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:paragraph {"className":"sp-stat__value"} --><p class="sp-stat__value">100%</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"sp-stat__label"} --><p class="sp-stat__label">In-house blast &amp; prep</p><!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"tagName":"section","className":"sp-services","layout":{"type":"default"}} -->
+<section class="wp-block-group sp-services" id="services"><!-- wp:paragraph {"className":"sp-eyebrow"} -->
+<p class="sp-eyebrow">What we do</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"className":"sp-h2"} -->
+<h2 class="wp-block-heading sp-h2">Everything from a single bracket to a full fabrication</h2>
+<!-- /wp:heading -->
+
+<!-- wp:image-menu-block/image-menu {"menuSlug":"home-page-boxes","className":"wp-block-image-menu-block-image-menu sp-image-menu"} /--></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"tagName":"section","className":"sp-about","layout":{"type":"default"}} -->
+<section class="wp-block-group sp-about"><!-- wp:columns {"verticalAlignment":"center"} -->
+<div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"45%"} -->
+<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:45%"><!-- wp:group {"className":"sp-about__media","layout":{"type":"default"}} -->
+<div class="wp-block-group sp-about__media"><!-- wp:image {"className":"sp-about__img"} -->
+<figure class="wp-block-image sp-about__img"><img src="https://7peakspowdercoating.co.uk/wp-content/uploads/2020/03/7-peaks-8.jpg" alt="Powder coating in the spray booth"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph {"className":"sp-about__badge"} -->
+<p class="sp-about__badge">Sheffield-made finishes</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"verticalAlignment":"center"} -->
+<div class="wp-block-column is-vertically-aligned-center"><!-- wp:paragraph {"className":"sp-eyebrow"} -->
+<p class="sp-eyebrow">Powder coating · Sheffield</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"className":"sp-h2"} -->
+<h2 class="wp-block-heading sp-h2">A hard-wearing finish, applied properly the first time</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>We are a Sheffield powder coating specialist working with everyone from fabricators and fleet operators to homeowners restoring a single set of alloys. Every job is blasted, pre-treated and coated in-house, so nothing leaves the unit until it is right.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Powder coating gives a thicker, tougher and more even finish than wet paint — resistant to chips, corrosion and UV — in virtually any RAL colour and a range of gloss levels and textures. No job too big, no job too small.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"tagName":"section","className":"sp-instagram","layout":{"type":"default"}} -->
+<section class="wp-block-group sp-instagram" id="instagram"><!-- wp:paragraph {"className":"sp-eyebrow"} -->
+<p class="sp-eyebrow">From the booth</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"className":"sp-h2"} -->
+<h2 class="wp-block-heading sp-h2">Follow the work in progress</h2>
+<!-- /wp:heading -->
+
+<!-- wp:sbi/sbi-feed-block /--></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"tagName":"section","className":"sp-contact","layout":{"type":"default"}} -->
+<section class="wp-block-group sp-contact" id="contact"><!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column {"width":"42%","className":"sp-contact__intro"} -->
+<div class="wp-block-column sp-contact__intro" style="flex-basis:42%"><!-- wp:paragraph {"className":"sp-eyebrow"} -->
+<p class="sp-eyebrow">Get in touch</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"className":"sp-h2"} -->
+<h2 class="wp-block-heading sp-h2">Tell us about your job</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Send the details and we’ll come back with a quote. Drop your parts off in Sheffield, or ask about collection and delivery.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>0114 478 4780</strong><br>sales@7peaks.co.uk<br>Unit 7, Parkwood Industrial Estate, Sheffield</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"className":"sp-contact__form"} -->
+<div class="wp-block-column sp-contact__form"><!-- wp:shortcode -->
+[contact-form-7 id="124" title="Contact form"]
+<!-- /wp:shortcode --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"tagName":"section","className":"sp-map","layout":{"type":"default"}} -->
+<section class="wp-block-group sp-map"><!-- wp:html -->
+<iframe src="https://maps.google.com/maps?width=100%&amp;height=450&amp;hl=en&amp;q=7%20Peaks%20Powder%20Coating%20Ltd.%2023B%20Orgreave%20Crescent%2C%20Handsworth%2C%20Rotherham%2C%20UK%2C%20S13%209NQ+(7%20Peaks%20)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" scrolling="no" marginheight="0" marginwidth="0" width="100%" height="420" frameborder="0"></iframe>
+<!-- /wp:html --></section>
+<!-- /wp:group -->

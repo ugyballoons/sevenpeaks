@@ -34,10 +34,10 @@
       </div>
 
       <div class="menu-button">
-          <div class="menu-slice one"></div>
-          <div class="menu-slice two"></div>
-          <div class="menu-slice tre"></div>
-        </div>
+        <div class="menu-slice one"></div>
+        <div class="menu-slice two"></div>
+        <div class="menu-slice tre"></div>
+      </div>
     </div>
     <?php get_template_part( "menu" ) ?>
   </header>

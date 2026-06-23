@@ -1,0 +1,56 @@
+<?php /* =====================================================================
+   7 PEAKS — designed footer.
+   Replace the CONTENTS of the <footer> … </footer> element in
+   themes/sevenpeaks/footer.php with everything below (keep the <footer>
+   tags, and keep whatever wp_footer()/closing markup already follows it).
+   Styling (.sp-footer*) is in the consolidated style.css.
+   ===================================================================== */ ?>
+<div class="sp-footer__inner">
+  <div class="sp-footer__brand">
+    <a class="sp-footer__logo" href="<?php echo site_url(); ?>">
+      <?php if (get_theme_mod('theme_logo')): ?>
+        <img src="<?php echo get_theme_mod('theme_logo'); ?>" alt="7 Peaks Powder Coating">
+      <?php else: ?>
+        <img src="<?php echo get_stylesheet_directory_uri() . '/img/logo.svg'; ?>" alt="7 Peaks Powder Coating">
+      <?php endif; ?>
+    </a>
+    <p class="sp-footer__motto">&ldquo;No job too big, No job too small&rdquo;</p>
+  </div>
+
+  <div class="sp-footer__col">
+    <h4>Services</h4>
+    <ul>
+      <li><a href="/powder-coating">Powder Coating</a></li>
+      <li><a href="/shot-blasting">Shot Blasting</a></li>
+      <li><a href="/pre-treatment">Pre-Treatment</a></li>
+      <li><a href="/masking-service">Masking Service</a></li>
+      <li><a href="/wrapping-job-protection">Wrapping &amp; Protection</a></li>
+      <li><a href="/drop-off-delivery">Drop Off &amp; Delivery</a></li>
+    </ul>
+  </div>
+
+  <div class="sp-footer__col">
+    <h4>Company</h4>
+    <ul>
+      <li><a href="/colour-chart">Colour Chart</a></li>
+      <li><a href="/contact">Contact Us</a></li>
+      <li><a href="https://instagram.com/7peaks_powdercoating">Instagram</a></li>
+      <li><a href="/terms-and-conditions">Terms &amp; Conditions</a></li>
+    </ul>
+  </div>
+
+  <div class="sp-footer__col">
+    <h4>Visit</h4>
+    <ul>
+      <li>23B Orgreave Crescent</li>
+      <li>Handsworth, Sheffield S13 9NQ</li>
+      <li><a href="tel:01144784780">0114 478 4780</a></li>
+      <li><a href="mailto:sales@7peaks.co.uk">sales@7peaks.co.uk</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="sp-footer__bar">
+  <span>&copy; <?php echo date('Y'); ?> 7 Peaks Powder Coating Ltd</span>
+  <span>Powder coating specialists &middot; Sheffield</span>
+</div>

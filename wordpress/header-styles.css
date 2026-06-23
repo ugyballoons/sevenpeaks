@@ -1,0 +1,179 @@
+/* =====================================================================
+   7 PEAKS — Refined header restyle  (CSS-only, no header.php change)
+   ---------------------------------------------------------------------
+   This OVERRIDES the theme's own header rules in style.css — you do NOT
+   need to delete anything from style.css. Each block below names the
+   style.css rule it supersedes. Paste BELOW home-styles.css in
+   Appearance → Customise → Additional CSS.
+
+   Result: sticky frosted bar — logo left · nav centre · phone + email
+   right, hairline border, refined fonts, orange underline-grow on hover
+   (replacing the theme's orange/green block + split-gradient nav).
+   ===================================================================== */
+
+/* ---- the bar ----
+   supersedes  style.css:  header { margin: 1em 53px 0 }  (and its 33px/15px
+   responsive variants) — we zero the margin and drive layout with padding. */
+#wrapper > header,
+body header {
+  margin: 0 !important;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 14px 84px;
+  background: rgba(255,255,255,0.86);
+  -webkit-backdrop-filter: saturate(140%) blur(10px);
+  backdrop-filter: saturate(140%) blur(10px);
+  border-bottom: 1px solid #e6e0d8;
+  box-sizing: border-box;
+  font-family: "Hanken Grotesk", system-ui, sans-serif;
+}
+
+/* lift .site-title's children onto the header row.
+   supersedes  style.css:  .site-title { display:flex; justify-content:
+   space-between; align-items:flex-end } */
+header .site-title { display: contents; }
+
+header .logo { order: 0; flex: none; display: inline-flex; align-items: center; margin: 0; }
+header .logo .logo-image { height: 56px; width: auto; display: block; }
+
+header .main-menu {
+  order: 1;
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* contact block.  supersedes  style.css:  .business-details { text-align:right }
+   and  .phone-number { font-size:32px } */
+header .business-details {
+  order: 2;
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 1.2;
+}
+header .business-details .phone-text {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6b625a;
+}
+header .business-details .phone-number {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Schibsted Grotesk", system-ui, sans-serif;
+  color: #191512;
+  text-decoration: none;
+  margin-top: 2px;
+}
+header .business-details .phone-number img { width: 18px; height: 18px; margin: 0; }
+header .business-details .email {
+  font-size: 13px;
+  color: #6b625a;
+  text-decoration: none;
+  margin-top: 2px;
+}
+header .business-details .email:hover { color: #e3902a; }
+
+/* ---- nav row ----
+   supersedes  style.css:  .main-menu .menu { justify-content:flex-start } */
+header .main-menu .menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  justify-content: center;
+}
+
+/* KILL the split-gradient block.
+   supersedes  style.css:
+     .main-menu .menu-item:not(.menu-item-has-children)::before { gradient }
+     .main-menu .menu-item-has-children { background:#e3902a }
+     .main-menu .menu-item { margin-right:6px; overflow:hidden } */
+header .main-menu .menu-item::before { display: none !important; }
+header .main-menu .menu-item,
+header .main-menu .menu-item-has-children,
+header .main-menu .menu-item-has-children:hover {
+  margin: 0 !important;
+  background: none !important;
+  overflow: visible !important;
+  position: relative;
+}
+
+/* link styling + orange underline-grow.
+   supersedes  style.css:  .main-menu .menu-item a { padding:10px; font-weight:400 } */
+header .main-menu .menu-item a {
+  position: relative;
+  display: inline-block;
+  padding: 6px 0;
+  color: #191512;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  background: none;
+  white-space: nowrap;
+}
+header .main-menu .menu-item a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: #e3902a;
+  transition: width 0.3s cubic-bezier(0.65,0.05,0.36,1);
+}
+header .main-menu .menu-item a:hover::after,
+header .main-menu .menu-item.current-menu-item a::after { width: 100%; }
+
+/* dropdown — clean white card.
+   supersedes  style.css:  .main-menu .sub-menu { top:39px; padding:6px 0 0 0 } */
+header .main-menu .sub-menu {
+  top: 100%;
+  background: #fff;
+  border: 1px solid #e6e0d8;
+  border-radius: 8px;
+  box-shadow: 0 18px 40px -22px rgba(0,0,0,0.35);
+  padding: 6px;
+}
+header .main-menu .sub-menu .menu-item { margin: 0 !important; }
+header .main-menu .sub-menu .menu-item a { padding: 8px 12px; }
+
+/* ---- hamburger (mobile) ---- */
+header .menu-button { order: 3; display: none; }
+header .menu-button .menu-slice { background: #191512; }
+
+/* ---- responsive ----
+   supersedes the theme's max-width:781px header block; we keep the theme's
+   own mobile-drawer JS (.mobile-menu-showing) in charge of opening the menu. */
+@media (max-width: 900px) {
+  #wrapper > header, body header {
+    padding: 12px 22px;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  header .logo .logo-image { height: 46px; }
+  header .menu-button { display: block; position: static; }
+  header .business-details { order: 1; margin-left: auto; text-align: right; }
+  header .main-menu { order: 4; flex-basis: 100%; justify-content: flex-start; }
+}
+
+/* ---- small phones 320–479px ---- */
+@media (max-width: 479px) {
+  #wrapper > header, body header { padding: 10px 16px; gap: 10px; }
+  header .logo .logo-image { height: 40px; }
+  header .business-details .phone-number { font-size: 17px; }
+  header .business-details .phone-number img { width: 16px; height: 16px; }
+  header .business-details .email { font-size: 12px; }
+  header .main-menu .menu { gap: 18px; flex-wrap: wrap; }
+}

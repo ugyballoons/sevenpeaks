@@ -1,0 +1,264 @@
+/* =====================================================================
+   7 PEAKS — Redesigned home page styles
+   Paste into Appearance → Customise → Additional CSS (or enqueue in the
+   theme). Pairs with handoff/wordpress/home-content.html.
+   The @import MUST stay on the very first line for Additional CSS.
+   ===================================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --sp-ink: #191512;
+  --sp-muted: #6b625a;
+  --sp-hair: #e6e0d8;
+  --sp-paper: #faf8f5;
+  --sp-orange: #e3902a;
+  --sp-green: #2a965f;
+  --sp-amber: #fbba3f;
+  --font-display: "Schibsted Grotesk", system-ui, sans-serif;
+  --font-body: "Hanken Grotesk", system-ui, sans-serif;
+}
+
+/* ---- shared section rhythm (the redesign uses a generous gutter) ---- */
+.sp-hero,
+.sp-stats,
+.sp-services,
+.sp-about,
+.sp-instagram,
+.sp-contact {
+  padding-left: 84px;
+  padding-right: 84px;
+  font-family: var(--font-body);
+  color: var(--sp-ink);
+}
+.sp-stats { padding-top: 52px; padding-bottom: 52px; }
+.sp-services,
+.sp-about,
+.sp-instagram,
+.sp-contact { padding-top: 104px; padding-bottom: 104px; }
+.sp-hero { padding-top: 92px; padding-bottom: 92px; }
+.sp-map { padding: 56px 84px 96px; background: var(--sp-paper); }
+.sp-map iframe {
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  height: 420px;
+  margin: 0 auto;
+  border: 0;
+  border-radius: 14px;
+  box-shadow: 0 18px 40px -22px rgba(0,0,0,0.35);
+}
+
+@media (max-width: 900px) {
+  .sp-hero, .sp-stats, .sp-services, .sp-about, .sp-instagram, .sp-contact {
+    padding-left: 22px; padding-right: 22px;
+  }
+  .sp-services, .sp-about, .sp-instagram, .sp-contact { padding-top: 64px; padding-bottom: 64px; }
+}
+
+/* ---- type primitives ---- */
+.sp-eyebrow {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 12.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--sp-orange);
+  margin: 0 0 14px;
+}
+.sp-display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(40px, 5.4vw, 60px);
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  margin: 0;
+  text-wrap: balance;
+}
+.sp-h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(30px, 3.4vw, 40px);
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  margin: 0;
+  text-wrap: balance;
+}
+.sp-lead {
+  font-size: 21px;
+  line-height: 1.6;
+  color: #463f38;
+  max-width: 520px;
+  margin: 22px 0 0;
+}
+
+/* ---- hero ---- */
+.sp-hero .wp-block-columns { gap: 48px; }
+.sp-hero__copy { max-width: 620px; }
+.sp-cta { margin-top: 32px; gap: 14px; }
+.sp-phone {
+  margin-top: 30px;
+  padding-top: 26px;
+  border-top: 1px solid var(--sp-hair);
+  font-size: 26px;
+  font-weight: 400;
+}
+.sp-phone a { color: var(--sp-ink); text-decoration: none; }
+
+/* portrait video panel */
+.sp-hero__media .sp-video { margin: 0; }
+.sp-hero__media .sp-video video {
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 30px 60px -28px rgba(0,0,0,0.45);
+  display: block;
+  margin: 0 auto;
+}
+
+/* ---- buttons (orange→green / outline) ---- */
+.sp-btn .wp-block-button__link {
+  border-radius: 6px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  padding: 13px 28px;
+  transition: background-color .3s, color .3s;
+}
+.sp-btn--primary .wp-block-button__link {
+  background: var(--sp-orange);
+  color: var(--sp-ink);
+}
+.sp-btn--primary .wp-block-button__link:hover { background: var(--sp-green); color: #fff; }
+.sp-btn--outline .wp-block-button__link {
+  background: #fff;
+  color: var(--sp-ink);
+  border: 2px solid var(--sp-ink);
+}
+.sp-btn--outline .wp-block-button__link:hover { background: var(--sp-ink); color: #fff; }
+
+/* ---- stats band ---- */
+.sp-stats { background: var(--sp-ink); color: #fff; }
+.sp-stat__value {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 46px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+.sp-stat__label {
+  font-size: 14.5px;
+  color: rgba(255,255,255,0.62);
+  margin: 10px 0 0;
+}
+
+/* ---- services ---- */
+.sp-services { background: var(--sp-paper); }
+.sp-services .sp-h2 { margin-bottom: 38px; max-width: 640px; }
+/* your image-menu plugin controls the tile grid; 8px gap + 6px radius to match */
+.sp-image-menu .menu-item,
+.sp-image-menu a { border-radius: 6px; overflow: hidden; }
+
+/* ---- about ---- */
+.sp-about .wp-block-columns { gap: 56px; }
+.sp-about__media { position: relative; margin: 0; }
+.sp-about__img { margin: 0; }
+.sp-about__img img { border-radius: 14px; aspect-ratio: 4 / 5; object-fit: cover; width: 100%; }
+.sp-about__badge {
+  position: absolute;
+  right: -18px;
+  bottom: -18px;
+  margin: 0;
+  background: var(--sp-amber);
+  color: var(--sp-ink);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: -0.01em;
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: 0 18px 40px -18px rgba(0,0,0,0.4);
+}
+.sp-about .sp-h2 { margin-bottom: 22px; }
+
+/* ---- instagram ---- */
+.sp-instagram { background: var(--sp-paper); }
+.sp-instagram .sp-h2 { margin-bottom: 28px; }
+/* Smash Balloon: 6 across, small gap, square crops, subtle radius */
+.sp-instagram #sb_instagram .sbi_item { padding: 4px !important; }
+.sp-instagram #sb_instagram .sbi_photo { border-radius: 8px; }
+
+/* ---- contact ---- */
+.sp-contact { background: var(--sp-ink); color: #fff; }
+.sp-contact .wp-block-columns { gap: 52px; align-items: flex-start; }
+.sp-contact .sp-eyebrow { color: var(--sp-orange); }
+.sp-contact .sp-h2 { color: #fff; }
+.sp-contact__intro p { color: rgba(255,255,255,0.72); line-height: 1.6; }
+.sp-contact__form {
+  background: #fff;
+  color: var(--sp-ink);
+  border-radius: 14px;
+  padding: 28px;
+}
+/* Contact Form 7 fields */
+.sp-contact__form input[type=text],
+.sp-contact__form input[type=email],
+.sp-contact__form input[type=tel],
+.sp-contact__form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+  padding: 10px;
+  font-family: var(--font-body);
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+.sp-contact__form .wpcf7-submit {
+  background: var(--sp-orange);
+  color: var(--sp-ink);
+  border: 0;
+  border-radius: 6px;
+  padding: 12px 26px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  cursor: pointer;
+}
+.sp-contact__form .wpcf7-submit:hover { background: var(--sp-green); color: #fff; }
+
+/* =====================================================================
+   SMALL PHONES  320px – 479px
+   ===================================================================== */
+@media (max-width: 479px) {
+  html, body { overflow-x: hidden; }
+  .sp-hero, .sp-stats, .sp-services, .sp-about, .sp-instagram, .sp-contact { overflow-x: hidden; }
+
+  .sp-hero { padding: 40px 16px 48px; }
+  .sp-stats { padding: 34px 16px; }
+  .sp-services, .sp-about, .sp-instagram, .sp-contact { padding-left: 16px; padding-right: 16px; padding-top: 52px; padding-bottom: 52px; }
+
+  .sp-hero .wp-block-columns { gap: 28px; }
+  .sp-display { font-size: 30px; line-height: 1.08; }
+  .sp-lead { font-size: 17px; margin-top: 16px; }
+  .sp-cta { flex-direction: column; align-items: stretch; gap: 10px; }
+  .sp-cta .sp-btn { width: 100%; }
+  .sp-cta .sp-btn .wp-block-button__link { display: block; text-align: center; padding: 12px 20px; }
+  .sp-phone { font-size: 20px; margin-top: 22px; padding-top: 20px; }
+  .sp-hero__media .sp-video video { max-width: 260px; }
+
+  .sp-stats .wp-block-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 22px 16px; margin: 0; }
+  .sp-stats .wp-block-column { flex-basis: auto !important; margin: 0 !important; }
+  .sp-stat__value { font-size: 34px; }
+
+  .sp-h2 { font-size: 25px; }
+
+  .sp-about .wp-block-columns, .sp-contact .wp-block-columns { gap: 26px; }
+  .sp-about__img img { aspect-ratio: 4 / 3; }
+  .sp-about__badge { right: 12px; bottom: 12px; font-size: 16px; padding: 10px 14px; border-radius: 10px; }
+  .sp-map { padding: 32px 16px 56px; }
+  .sp-map iframe { height: 320px; }
+  .sp-contact__form { padding: 18px; }
+
+  .sp-instagram #sb_instagram .sbi_item { width: 33.333% !important; }
+}

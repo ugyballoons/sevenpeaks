@@ -1,0 +1,100 @@
+/* =====================================================================
+   7 PEAKS — Colour Chart page styles  (standalone)
+   Use ONLY if you did NOT replace the whole style.css (these rules are
+   already inside the consolidated style.css). Paste into Additional CSS.
+   Pairs with colour-chart-content.html.
+   ===================================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --sp-ink: #191512;
+  --sp-muted: #6b625a;
+  --sp-hair: #e6e0d8;
+  --sp-orange: #e3902a;
+  --font-display: "Schibsted Grotesk", system-ui, sans-serif;
+  --font-body: "Hanken Grotesk", system-ui, sans-serif;
+}
+
+.sp-colourchart {
+  padding: 64px 84px 96px;
+  font-family: var(--font-body);
+  color: var(--sp-ink);
+}
+.sp-eyebrow {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 12.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--sp-orange);
+  margin: 0 0 14px;
+}
+.sp-h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(30px, 3.4vw, 40px);
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+.sp-colourchart__intro {
+  max-width: 620px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--sp-muted);
+  margin: 12px 0 8px;
+}
+.sp-ral__wrap { margin-top: 8px; }
+.sp-ral__family {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: -0.01em;
+  margin: 40px 0 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--sp-hair);
+}
+.sp-ral__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(134px, 1fr));
+  gap: 10px;
+}
+.sp-ral {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06);
+  transition: transform 0.22s cubic-bezier(0.65,0.05,0.36,1), box-shadow 0.22s ease;
+  outline: 0 solid transparent;
+}
+.sp-ral.is-dark { color: #fff; }
+.sp-ral.is-light { color: var(--sp-ink); }
+.sp-ral__code { font-family: var(--font-display); font-weight: 600; font-size: 13px; line-height: 1.1; }
+.sp-ral__name { font-size: 11.5px; line-height: 1.2; opacity: 0.82; margin-top: 2px; }
+.sp-ral:hover,
+.sp-ral:focus-visible {
+  transform: translateY(-4px) scale(1.06);
+  box-shadow: 0 16px 34px -10px rgba(0,0,0,0.45);
+  outline: 3px solid #fff;
+  outline-offset: -3px;
+  z-index: 2;
+}
+.sp-ral:hover .sp-ral__name,
+.sp-ral:focus-visible .sp-ral__name { opacity: 1; }
+
+@media (max-width: 900px) {
+  .sp-colourchart { padding-left: 22px; padding-right: 22px; }
+}
+@media (max-width: 479px) {
+  .sp-colourchart { padding: 48px 16px 64px; }
+  .sp-ral__grid { grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 7px; }
+  .sp-ral { padding: 9px; }
+  .sp-ral__code { font-size: 12px; }
+  .sp-ral__name { font-size: 10.5px; }
+  .sp-ral__family { font-size: 19px; margin-top: 30px; }
+}

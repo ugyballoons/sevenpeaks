@@ -7,7 +7,10 @@ function sevenpeaks_setup() {
   load_theme_textdomain( 'sevenpeaks', get_template_directory() . '/languages' );
   // global $content_width;
   // if ( ! isset( $content_width ) ) { $content_width = 1920; }
-  register_nav_menus( ['main-menu' => esc_html__( 'Main Menu', 'sevenpeaks' )] );
+  register_nav_menus( [
+    'main-menu' => esc_html__( 'Main Menu', 'sevenpeaks' ),
+    'footer-services' => esc_html__( 'Footer Services', 'sevenpeaks' )
+  ] );
 }
 
 add_theme_support('title-tag');
